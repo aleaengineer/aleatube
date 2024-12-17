@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fast and free YouTube video downloader - Download videos in MP4, MP3 formats in HD quality">
+    <meta name="keywords" content="youtube downloader, video downloader, mp4 downloader, mp3 converter">
+    <meta name="theme-color" content="#ff0000">
+    <title>Aleatube - YouTube Video Downloader</title>
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="AleaTube">
+    <!-- FOnt Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark bg-danger">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="/">
+                <i class="fab fa-youtube fa-lg me-2"></i>
+                <span>AleaTube</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow-lg">
+                    <div class="card-body p-4">
+                        <h1 class="text-center h3 mb-4">Download YouTube Video</h1>
+                        
+                        <!-- Input Form -->
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="text" 
+                                       id="videoUrl" 
+                                       class="form-control form-control-lg" 
+                                       placeholder="Paste YouTube URL here"
+                                       aria-label="YouTube URL">
+                                <button onclick="downloadVideo()" 
+                                        class="btn btn-danger btn-lg">
+                                    <i class="fas fa-download me-2"></i>Download
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Results Area -->
+                        <div id="result" class="mt-4"></div>
+
+                        <!-- Download Options -->
+                        <div class="download-container mt-4">
+                            <div id="downloadOptions"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Instructions -->
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <h2 class="h5 mb-3">How to Download:</h2>
+                        <ol class="mb-0">
+                            <li>Copy YouTube video URL</li>
+                            <li>Paste URL in the input box above</li>
+                            <li>Click Download button</li>
+                            <li>Select your preferred format and quality</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light mt-5 py-3">
+        <div class="container text-center">
+            <p class="mb-0">© 2024 Aleatube. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
